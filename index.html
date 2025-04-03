@@ -4,9 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CK Cosmetics</title>
-  <!-- Inclusion de Font Awesome pour les icônes sociales -->
+  <!-- Inclusion de Font Awesome pour les icônes -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <!-- Lien vers le fichier CSS -->
+  <!-- Lien vers le fichier CSS externe -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -21,6 +21,8 @@
         <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
       <button id="mode-toggle" class="mode-toggle"><i class="fas fa-sun"></i></button>
+      <!-- Bouton Hamburger pour mobile -->
+      <button class="hamburger" id="hamburger"><i class="fas fa-bars"></i></button>
     </div>
   </nav>
 
@@ -28,7 +30,7 @@
   <section class="hero" id="hero">
     <div class="slideshow">
       <img src="images/slide1.jpg" class="slide" alt="Slide 1" />
-      <img src="images/image.png" class="slide" alt="Slide 2" />
+      <img src="images/slide2.jpg" class="slide" alt="Slide 2" />
       <img src="images/slide3.jpg" class="slide" alt="Slide 3" />
     </div>
     <div class="overlay"></div>
@@ -42,6 +44,7 @@
   <section class="section" id="products">
     <h2 style="text-align:center; color:#D4AF37;">Nos Produits</h2>
     <div class="products">
+      <!-- Exemple de produit -->
       <div class="product" data-title="Huile pour le corps" data-description="Une huile nourrissante pour le corps, riche en vitamines et antioxydants. Idéale pour hydrater et sublimer votre peau." data-image="images/Lait-Corporelle.png">
         <img src="images/Lait-Corporelle.png" alt="Huile pour le corps" />
         <div class="hover-description">Huile nourrissante pour le corps</div>
@@ -140,7 +143,7 @@
     </div>
   </div>
 
-  <!-- Lien vers le fichier JavaScript -->
+  <!-- Lien vers le fichier JavaScript externe -->
   <script src="script.js"></script>
 </body>
 </html>

@@ -53,4 +53,12 @@ document.addEventListener("DOMContentLoaded", () => {
       modeToggle.innerHTML = '<i class="fas fa-sun"></i>';
     }
   });
+
+  // Gestion du menu hamburger pour la navbar responsive
+  const hamburger = document.getElementById('hamburger');
+  const navMenu = document.querySelector('.nav-menu');
+  
+  hamburger.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+  });
 });

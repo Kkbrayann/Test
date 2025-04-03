@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CK Cosmetics</title>
+  <!-- Inclusion de Font Awesome pour les icônes sociales -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <!-- Lien vers le fichier CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- MENU DE NAVIGATION -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo">CK Cosmetics</a>
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="#hero" class="nav-link">Accueil</a></li>
+        <li class="nav-item"><a href="#products" class="nav-link">Produits</a></li>
+        <li class="nav-item"><a href="#about" class="nav-link">À propos</a></li>
+        <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <button id="mode-toggle" class="mode-toggle"><i class="fas fa-sun"></i></button>
+    </div>
+  </nav>
+
+  <!-- SECTION HERO AVEC SLIDESHOW -->
+  <section class="hero" id="hero">
+    <div class="slideshow">
+      <img src="images/slide1.jpg" class="slide" alt="Slide 1" />
+      <img src="images/image.png" class="slide" alt="Slide 2" />
+      <img src="images/slide3.jpg" class="slide" alt="Slide 3" />
+    </div>
+    <div class="overlay"></div>
+    <img src="images/Logo_Blanc.svg" alt="CK Cosmetics Logo" class="logo hero-logo" />
+    <h1>Naturellement vous, intensément beau</h1>
+    <p>Sublimez votre beauté avec notre gamme 100% naturelle</p>
+    <button class="btn">Découvrir le catalogue</button>
+  </section>
+
+  <!-- SECTION PRODUITS -->
+  <section class="section" id="products">
+    <h2 style="text-align:center; color:#D4AF37;">Nos Produits</h2>
+    <div class="products">
+      <div class="product" data-title="Huile pour le corps" data-description="Une huile nourrissante pour le corps, riche en vitamines et antioxydants. Idéale pour hydrater et sublimer votre peau." data-image="images/Lait-Corporelle.png">
+        <img src="images/Lait-Corporelle.png" alt="Huile pour le corps" />
+        <div class="hover-description">Huile nourrissante pour le corps</div>
+        <h3>Huile pour le corps</h3>
+        <p>4 500 FCFA</p>
+      </div>
+      <div class="product" data-title="Gommage" data-description="Un gommage doux pour exfolier et revitaliser votre peau. Formulé avec des ingrédients naturels pour une peau éclatante." data-image="images/Gommage.png">
+        <img src="images/Gommage.png" alt="Gommage" />
+        <div class="hover-description">Gommage doux revitalisant</div>
+        <h3>Gommage</h3>
+        <p>3 000 FCFA</p>
+      </div>
+      <div class="product" data-title="Savon Pureté Divine" data-description="Un savon artisanal qui nettoie en douceur tout en respectant l'équilibre naturel de la peau." data-image="images/Carte-de-Visite2.jpg">
+        <img src="images/Carte-de-Visite2.jpg" alt="Savon Pureté Divine" />
+        <div class="hover-description">Savon artisanal pour une peau pure</div>
+        <h3>Savon Pureté Divine</h3>
+        <p>2 000 FCFA</p>
+      </div>
+      <div class="product" data-title="Crème pour le visage" data-description="Crème légère pour le visage, idéale pour hydrater et protéger votre peau des agressions extérieures." data-image="images/Crème-Visage.png">
+        <img src="images/Crème-Visage.png" alt="Crème pour le visage" />
+        <div class="hover-description">Crème hydratante pour le visage</div>
+        <h3>Crème pour le visage</h3>
+        <p>5 000 FCFA</p>
+      </div>
+      <div class="product" data-title="Huile d'hydratation" data-description="Une huile spécialement conçue pour apporter une hydratation intense, laissant votre peau douce et souple." data-image="images/lotion.jpg">
+        <img src="images/lotion.jpg" alt="Huile d'hydratation" />
+        <div class="hover-description">Hydratation intense pour la peau</div>
+        <h3>Huile d'hydratation</h3>
+        <p>4 500 FCFA</p>
+      </div>
+      <div class="product" data-title="Gel de toilette" data-description="Gel rafraîchissant pour le corps, formulé pour nettoyer en profondeur et laisser une sensation de fraîcheur." data-image="images/Lotions.png">
+        <img src="images/Lotions.png" alt="Gel de toilette" />
+        <div class="hover-description">Gel rafraîchissant pour le corps</div>
+        <h3>Gel de toilette</h3>
+        <p>3 500 FCFA</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION À PROPOS -->
+  <section class="about" id="about">
+    <h2 style="color:#D4AF37;">À propos de CK Cosmetics</h2>
+    <p>
+      CK Cosmetics est une marque camerounaise dédiée à la beauté naturelle et inclusive. Nos soins sont conçus avec des ingrédients de qualité, respectueux de la peau, pour sublimer toutes les beautés.
+    </p>
+  </section>
+
+  <!-- SECTION TÉMOIGNAGES -->
+  <section class="testimonials">
+    <div class="testimonials-overlay"></div>
+    <h2 style="color:#D4AF37;">Témoignages</h2>
+    <div class="testimonial">
+      <p>“Depuis que j’utilise leurs produits, ma peau est plus douce et lumineuse. J’adore leur gommage et leur crème visage !”<br>— Aïcha, Yaoundé</p>
+    </div>
+    <div class="testimonial">
+      <p>“Enfin des produits qui respectent ma peau sensible, et en plus le design est magnifique.”<br>— Brice, Douala</p>
+    </div>
+  </section>
+
+  <!-- SECTION APPEL À L’ACTION -->
+  <section class="cta">
+    <h2 style="color:#D4AF37;">Prêt(e) à révéler votre beauté naturelle ?</h2>
+    <button class="btn">Commander maintenant</button>
+  </section>
+
+  <!-- SECTION CONTACT -->
+  <section class="contact" id="contact">
+    <h3 style="color:#D4AF37;">Restons connectés</h3>
+    <div class="social-icons">
+      <a href="https://twitter.com/votreprofil" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://wa.me/237XXXXXXXXX" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://facebook.com/votrepage" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://instagram.com/ckcosmetics.cm" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://snapchat.com/add/votrecompte" target="_blank"><i class="fab fa-snapchat"></i></a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2025 CK Cosmetics — Tous droits réservés
+  </footer>
+
+  <!-- Modal pour afficher le détail du produit -->
+  <div id="product-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <div class="modal-body">
+        <div class="modal-image">
+          <img src="" alt="Produit" />
+        </div>
+        <div class="modal-description">
+          <h2></h2>
+          <p></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lien vers le fichier JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>

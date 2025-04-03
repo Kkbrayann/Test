@@ -1,0 +1,390 @@
+/* Global */
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #000;
+  color: #fff;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Mode Light */
+body.light-mode {
+  background-color: #fff;
+  color: #000;
+}
+
+/* ===================== */
+/* Navbar */
+/* ===================== */
+.navbar {
+  background: #111;
+  padding: 1rem 2rem; /* Augmentation de la hauteur */
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #D4AF37;
+  text-decoration: none;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+  margin-left: auto; /* Pousse le menu à droite */
+}
+
+.nav-menu li a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-menu li a:hover {
+  color: #D4AF37;
+}
+
+.mode-toggle {
+  background: none;
+  border: none;
+  color: #D4AF37;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-left: 1rem;
+}
+
+/* ===================== */
+/* SECTION HERO & SLIDESHOW */
+/* ===================== */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  padding: 6rem 2rem 2rem; /* espace pour la navbar */
+}
+
+.slideshow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 300%;
+  height: 100%;
+  z-index: 0;
+  transition: transform 1s ease-in-out;
+}
+
+.slide {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+/* Overlay avec dégradé progressif plus foncé */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.5));
+  z-index: 1;
+}
+
+/* Contenu de la section HERO au-dessus du slideshow */
+.hero > *:not(.slideshow):not(.overlay) {
+  position: relative;
+  z-index: 2;
+}
+
+.hero img.hero-logo {
+  height: 200px;
+  margin-bottom: 1rem;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  color: #D4AF37;
+}
+
+.hero p {
+  color: #ccc;
+  max-width: 600px;
+  margin: 1rem auto;
+}
+
+.btn {
+  background-color: #D4AF37;
+  color: #000;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 9999px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.btn:hover {
+  background-color: #bfa235;
+  transition: background-color 0.3s ease;
+}
+
+/* ===================== */
+/* SECTION PRODUITS */
+/* ===================== */
+.section {
+  padding: 4rem 2rem;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.product {
+  position: relative;
+  overflow: hidden;
+  background: #1a1a1a;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.product img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+/* Description courte affichée au survol sur l'ensemble du produit */
+.hover-description {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,0.7);
+  color: #fff;
+  padding: 0.5rem;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+}
+
+.product:hover .hover-description {
+  opacity: 1;
+}
+
+/* Overlay sur le produit lors du hover */
+.product::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0);
+  transition: background-color 0.3s ease;
+  z-index: 1;
+}
+
+.product:hover::after {
+  background-color: rgba(0,0,0,0.5);
+}
+
+/* Centre le nom et le prix du produit */
+.product h3,
+.product p {
+  text-align: center;
+}
+
+/* ===================== */
+/* SECTION À PROPOS */
+/* ===================== */
+.about {
+  background-color: #111;
+  padding: 4rem 2rem;
+  text-align: center;
+  color: #ccc;
+}
+
+/* ===================== */
+/* SECTION TÉMOIGNAGES */
+/* ===================== */
+.testimonials {
+  position: relative;
+  padding: 4rem 2rem;
+  text-align: center;
+  /* Ajout de l'image de fond */
+  background: url('images/image.png') no-repeat center/cover;
+}
+
+.testimonials .testimonials-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.5));
+  z-index: 1;
+}
+
+.testimonials h2,
+.testimonials .testimonial {
+  position: relative;
+  z-index: 2;
+}
+
+.testimonials .testimonial {
+  margin: 1rem auto;
+  max-width: 800px;
+  padding: 1rem;
+  background: rgba(26,26,26,0.9);
+  border-radius: 1rem;
+}
+
+/* ===================== */
+/* SECTION APPEL À L’ACTION */
+/* ===================== */
+.cta {
+  background-color: #000;
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.cta h2 {
+  color: #D4AF37;
+}
+
+/* ===================== */
+/* SECTION CONTACT */
+/* ===================== */
+.contact {
+  text-align: center;
+  background: #111;
+  padding: 2rem;
+}
+
+.contact .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.contact .social-icons a {
+  color: #D4AF37;
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.contact .social-icons a:hover {
+  transform: scale(1.1);
+}
+
+/* ===================== */
+/* FOOTER */
+/* ===================== */
+footer {
+  background: #000;
+  text-align: center;
+  color: #888;
+  padding: 1rem;
+  font-size: 0.875rem;
+}
+
+/* ===================== */
+/* Modal pour détails produit */
+/* ===================== */
+.modal {
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+
+.modal.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-content {
+  background-color: #1a1a1a;
+  margin: 5% auto;
+  padding: 1rem;
+  border-radius: 1rem;
+  width: 80%;
+  max-width: 800px;
+  color: #fff;
+  position: relative;
+}
+
+.close-modal {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.modal-body {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.modal-image, .modal-description {
+  flex: 1;
+}
+
+.modal-image img {
+  width: 100%;
+  border-radius: 1rem;
+}
+
+/* ===================== */
+/* Responsive */
+/* ===================== */
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+  .btn {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+  }
+  .product img {
+    height: 200px;
+  }
+  .section {
+    padding: 2rem 1rem;
+  }
+  .modal-body {
+    flex-direction: column;
+  }
+}
